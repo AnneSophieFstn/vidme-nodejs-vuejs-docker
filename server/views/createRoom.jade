@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= title
+    form(name="add-estimation", action='/room/add', method="post")
+        div.input
+            span.label Title
+            input(type="text", name="nom")
+            input(type="hidden", name="adminId", value='1')
+        div.actions
+            input(type="submit", value="Create")
